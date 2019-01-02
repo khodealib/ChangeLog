@@ -55,7 +55,9 @@ allprojects {
 ```
 ```
 dependencies {
-     compile 'com.github.hannesa2:ChangeLog:V2.0.0'
+     implementation 'com.github.hannesa2:ChangeLog:2.0.0' // Android X
+     // or
+     implementation 'com.github.hannesa2:ChangeLog:1.1.1' // support Lib
 }
 ```
 
