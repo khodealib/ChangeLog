@@ -257,7 +257,7 @@ open class ChangeLog
     protected fun getLog(full: Boolean): String {
         val sb = StringBuilder()
 
-        sb.append("<html><head><style type=\"text/css\">")
+        sb.append("<html lang=\"fa\"\n" + "dir=\"rtl\"><head><style type=\"text/css\">")
         sb.append(css)
         sb.append("</style></head><body>")
 
@@ -493,14 +493,17 @@ open class ChangeLog
         const val DEFAULT_CSS = "h1 { margin-left: 0px; font-size: 1.2em; }" + "\n" +
                 "li { margin-left: 0px; }" + "\n" +
                 "ul { padding-left: 2em; }"
+
         /**
          * Tag that is used when sending error/debug messages to the log.
          */
         private const val LOG_TAG = "ChangeLog"
+
         /**
          * This is the key used when storing the version code in SharedPreferences.
          */
         protected const val VERSION_KEY = "ChangeLog_last_version_code"
+
         /**
          * Constant that used when no version code is available.
          */
