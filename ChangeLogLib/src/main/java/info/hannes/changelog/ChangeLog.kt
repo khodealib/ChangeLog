@@ -257,7 +257,7 @@ open class ChangeLog
     protected fun getLog(full: Boolean): String {
         val sb = StringBuilder()
 
-        sb.append("<html lang=\"fa\"\n" + "dir=\"rtl\"><head><style type=\"text/css\">")
+        sb.append("<html lang=\"fa\"\n" + "dir=\"rtl\"><head><style type=\\\"text/css\\\">@font-face {font-family: MyFont;src: url(\\\"file:///android_asset/font/samim_fd.ttf\\\")}body {font-family: MyFont;font-size: medium;text-align: justify;}")
         sb.append(css)
         sb.append("</style></head><body>")
 
