@@ -257,16 +257,16 @@ open class ChangeLog
     protected fun getLog(full: Boolean): String {
         val sb = StringBuilder()
 
-        sb.append("<html lang=\"fa\"\n" + "dir=\"rtl\"><head><style type=\\\"text/css\\\">@font-face {font-family: MyFont;src: url(\\\"file:///android_asset/font/samim_fd.ttf\\\")}body {font-family: MyFont;font-size: medium;text-align: justify;}")
+        sb.append("<html lang=\"fa\"\n" + "dir=\"rtl\"><head><style type=\\\"text/css\\\">")
         sb.append(css)
-        sb.append("</style></head><body>")
+        sb.append("</style></head><body style=\"font-size: smaller;\">")
 
         val versionFormat = context.resources.getString(R.string.changelog_version_format)
 
         val changelog = getChangeLog(full)
 
         for (release in changelog) {
-            sb.append("<h1>")
+            sb.append("<h1 style=\"font-size: 1rem;\">")
             sb.append(String.format(versionFormat, release.versionName))
             sb.append("</h1><ul>")
             for (change in release.changes) {
