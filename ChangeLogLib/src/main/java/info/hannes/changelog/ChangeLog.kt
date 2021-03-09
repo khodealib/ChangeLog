@@ -259,7 +259,7 @@ open class ChangeLog
 
         sb.append("<html lang=\"fa\"\n" + "dir=\"rtl\"><head><style type=\\\"text/css\\\">")
         sb.append(css)
-        sb.append("</style></head><body style=\"font-size: smaller;\">")
+        sb.append("</style></head><body style=\"font-size: 1rem;margin-right: 20px;\">")
 
         val versionFormat = context.resources.getString(R.string.changelog_version_format)
 
