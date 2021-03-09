@@ -3,4 +3,12 @@
 The master change log is kept in res/xml/changelog.xml.
 Locale specific versions are kept in res/xml-<locale qualifier>/changelog.xml.
 -->
-<changelog />
+<changelog>
+    <release version="1.1" versioncode="11" >
+        <change>تغییرات</change>
+    </release>
+    <release version="1.0" versioncode="10" >
+        <change>تغییرات</change>
+        <change>تغییرات تغییرات تغییرات تغییرات</change>
+    </release>
+</changelog>
