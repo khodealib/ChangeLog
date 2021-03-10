@@ -259,7 +259,7 @@ open class ChangeLog
 
         sb.append("<html lang=\"fa\"\n" + "dir=\"rtl\"><head><style type='text/css'>@font-face {font-family: SamimFd; src: url('file:///android_asset/SamimFd.ttf')}")
         sb.append(css)
-        sb.append("</style></head><body style=\"font-size: 1rem;margin-right: 10px;font-family: SamimFd;\"")
+        sb.append("</style></head><body style=\"font-size: 1rem;margin-right: 10px;font-family: SamimFd;\">")
 
         val versionFormat = context.resources.getString(R.string.changelog_version_format)
 
