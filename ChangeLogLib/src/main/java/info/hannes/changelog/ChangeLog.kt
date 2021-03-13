@@ -33,11 +33,11 @@ open class ChangeLog
         /**
          * Context that is used to access the resources and to create the ChangeLog dialogs.
          */
-        private val context: Context, preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context),
+        private val context: Context, val fontName: String, preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context),
         /**
          * Contains the CSS rules used to format the change log.
          */
-        protected val css: String = DEFAULT_CSS) {
+        private val css: String = DEFAULT_CSS) {
 
     /**
      * Last version code read from `SharedPreferences` or [.NO_VERSION].
@@ -163,7 +163,7 @@ open class ChangeLog
      * @param context Context that is used to access the resources and to create the ChangeLog dialogs.
      * @param css     CSS styles that will be used to format the change log.
      */
-    constructor(context: Context, css: String) : this(context, PreferenceManager.getDefaultSharedPreferences(context), css) {}
+    constructor(context: Context, fontName: String, css: String) : this(context, fontName, PreferenceManager.getDefaultSharedPreferences(context), css) {}
 
     init {
 
@@ -257,9 +257,9 @@ open class ChangeLog
     protected fun getLog(full: Boolean): String {
         val sb = StringBuilder()
 
-        sb.append("<html lang=\"fa\"\n" + "dir=\"rtl\"><head><style type='text/css'>@font-face {font-family: SamimFd; src: url('file:///android_asset/SamimFd.ttf')}")
+        sb.append("<html lang=\"fa\"\ndir=\"rtl\"><head><style type='text/css'>@font-face {font-family: webViewFont; src: url('file:///android_res/font/$fontName.ttf')}")
         sb.append(css)
-        sb.append("</style></head><body style=\"font-size: 1rem;margin-right: 10px;font-family: SamimFd;\">")
+        sb.append("</style></head><body style=\"font-size: 1rem;margin-right: 10px;font-family: webViewFont;\">")
 
         val versionFormat = context.resources.getString(R.string.changelog_version_format)
 

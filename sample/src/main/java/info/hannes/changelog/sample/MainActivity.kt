@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             setupDrawerContent(it)
         }
 
-        val changeLog = ChangeLog(this)
+        val changeLog = ChangeLog(this,"samim")
         if (changeLog.isFirstRun) {
             changeLog.logDialog.show()
         }
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     private fun selectNavigationItem(itemId: Int) {
 
         when (itemId) {
-            R.id.nav_full_changelog -> ChangeLog(this).fullLogDialog.show()
+            R.id.nav_full_changelog -> ChangeLog(this,"samim").fullLogDialog.show()
             R.id.nav_whats_new -> DarkThemeChangeLog(this).logDialog.show()
             R.id.nav_other_github -> {
                 val url = "https://github.com/hannesa2/ChangeLog"
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             android.R.id.home -> mDrawerLayout.openDrawer(GravityCompat.START)
             R.id.nav_whats_new -> DarkThemeChangeLog(this).logDialog.show()
-            R.id.nav_full_changelog -> ChangeLog(this).fullLogDialog.show()
+            R.id.nav_full_changelog -> ChangeLog(this,"samim").fullLogDialog.show()
         }
         return true
     }
