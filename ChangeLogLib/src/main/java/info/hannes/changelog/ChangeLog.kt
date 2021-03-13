@@ -259,14 +259,14 @@ open class ChangeLog
 
         sb.append("<html lang=\"fa\"\ndir=\"rtl\"><head><style type='text/css'>@font-face {font-family: webViewFont; src: url('file:///android_res/font/$fontName.ttf')}")
         sb.append(css)
-        sb.append("</style></head><body style=\"font-size: 1rem;margin-right: 10px;font-family: webViewFont;\">")
+        sb.append("</style></head><body style=\"font-size: 0.8rem;margin-right: 10px;font-family: webViewFont;\">")
 
         val versionFormat = context.resources.getString(R.string.changelog_version_format)
 
         val changelog = getChangeLog(full)
 
         for (release in changelog) {
-            sb.append("<h1 style=\"font-size: 1rem;\">")
+            sb.append("<h1 style=\"font-size:1rem;\">")
             sb.append(String.format(versionFormat, release.versionName))
             sb.append("</h1><ul>")
             for (change in release.changes) {
@@ -490,7 +490,7 @@ open class ChangeLog
         /**
          * Default CSS styles used to format the change log.
          */
-        const val DEFAULT_CSS = "h1 { margin-left: 0px; font-size: 1.2em; }" + "\n" +
+        const val DEFAULT_CSS = "h1 { margin-left: 0px; }" + "\n" +
                 "li { margin-left: 0px; }" + "\n" +
                 "ul { padding-left: 2em; }"
 
